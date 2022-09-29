@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import profile from '../../images/1640684636.jpg';
 import { addDB, getStoredBreakPoint } from '../../utilities/fakedb';
 import Breakpoint from '../Breakpoint/Breakpoint';
@@ -31,6 +33,8 @@ const Profile = (props) => {
     for (const duration of durations) {
         total_duration = total_duration + duration;
     }
+
+    const notify = () => toast("React Toaster");
 
     return (
         <div>
@@ -78,7 +82,8 @@ const Profile = (props) => {
             </div>
 
             <div className="card-footer bg-transparent border-0 d-grid gap-2 mb-3">
-                <button className='btn btn-info text-white'>Activity Completed</button>
+                <button onClick={notify} className='btn btn-info text-white'>Activity Completed</button>
+                <ToastContainer></ToastContainer>
             </div>
 
 
