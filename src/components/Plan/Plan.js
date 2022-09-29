@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Plan = (props) => {
-    const {plan, addDuration} = props;
+    const { plan, addDuration } = props;
     const { img, name, description, duration, price, person } = plan;
     return (
         <div className="col">
