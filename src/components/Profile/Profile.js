@@ -1,7 +1,9 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapLocation, faPlane, faCode, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import profile from '../../images/1640684636.jpg';
+import profile from '../../images/51544.jpg';
 import { addDB, getStoredBreakPoint } from '../../utilities/fakedb';
 import Breakpoint from '../Breakpoint/Breakpoint';
 import './Profile.css'
@@ -44,17 +46,20 @@ const Profile = (props) => {
                 </div>
                 <div className="flex-grow-1 ms-3">
                     <p className='fw-bolder'>Abir Das</p>
-                    <p>Chattogram, Bangladesh</p>
+                    <p><FontAwesomeIcon icon={faMapLocation}></FontAwesomeIcon> Chattogram, Bangladesh</p>
                 </div>
             </div>
             <div className="d-flex justify-content-around align-items-center bg-info text-white rounded-4 py-3 my-3">
-                <div>
+                <div className='text-center'>
+                    <FontAwesomeIcon icon={faPlane}></FontAwesomeIcon>
                     <p>Travelling</p>
                 </div>
-                <div>
+                <div className='text-center'>
+                    <FontAwesomeIcon icon={faCode}></FontAwesomeIcon>
                     <p>Coding</p>
                 </div>
-                <div>
+                <div className='text-center'>
+                    <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
                     <p>Shopping</p>
                 </div>
             </div>
