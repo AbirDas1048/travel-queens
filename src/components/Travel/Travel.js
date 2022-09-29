@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Faq from '../FAQ/Faq';
 import Plan from '../Plan/Plan';
 import Profile from '../Profile/Profile';
 import './Travel.css'
@@ -29,6 +30,7 @@ const Travel = () => {
                             plans.map(plan => <Plan key={plan.id} plan={plan} addDuration={addDuration}></Plan>)
                         }
                     </div>
+                    <Faq></Faq>
                 </div>
 
             </div>
